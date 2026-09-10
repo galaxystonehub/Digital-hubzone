@@ -1,104 +1,193 @@
 /*
-  HOW TO ADD YOUR OWN PRODUCTS
-  ----------------------------
+  HOW TO ADD MORE PRODUCTS
+  -------------------------
   Copy one block below and edit the values. Fields:
-    title      -> product name shown on the card
-    price      -> current price, e.g. "Rs 2,499"
-    wasPrice   -> optional original price (leave "" if none)
-    image      -> a direct image link (product photo URL)
-    link       -> YOUR affiliate link (AliExpress / Daraz / Temu). Not shown
-                 as visible text — the "Get this deal" button opens it via
-                 JavaScript when tapped.
-    source     -> "AliExpress" | "Daraz" | "Temu"  (shown as a small tag)
-    category   -> "electronics" | "home" | "fashion" | "gadgets"  (or add your own,
-                  just also add a matching chip in script.js -> CATEGORIES)
+    title, price, wasPrice, image, link, source, category
 
-  Keep the platform tag (source) on every card — AliExpress, Daraz and Temu
-  affiliate programs require the link to be identifiable as a partner link.
-  It can stay small and subtle, it just can't be hidden completely.
+  Some products below still use a placeholder image (image field starts
+  with "https://placehold.co"). Send the real product photo whenever you
+  have it and it can be swapped in.
 */
 
 const PRODUCTS = [
   {
-    title: "Wireless earbuds with charging case",
-    price: "Rs 2,199",
-    wasPrice: "Rs 3,400",
-    image: "https://placehold.co/400x400/eee/1c1f26?text=Earbuds",
-    link: "#REPLACE-WITH-YOUR-ALIEXPRESS-AFFILIATE-LINK",
+    title: "2-in-1 Kitchen Spray Oil Dispenser",
+    price: "Rs 650",
+    wasPrice: "Rs 1,898",
+    image: "images/oil-dispenser.jpg",
+    link: "https://s.click.aliexpress.com/e/_c444O7vr",
     source: "AliExpress",
-    category: "electronics"
-  },
-  {
-    title: "Portable blender bottle, USB rechargeable",
-    price: "Rs 1,850",
-    wasPrice: "",
-    image: "https://placehold.co/400x400/eee/1c1f26?text=Blender",
-    link: "#REPLACE-WITH-YOUR-DARAZ-AFFILIATE-LINK",
-    source: "Daraz",
     category: "home"
   },
   {
-    title: "Adjustable laptop stand, aluminum",
-    price: "Rs 2,650",
-    wasPrice: "Rs 3,100",
-    image: "https://placehold.co/400x400/eee/1c1f26?text=Laptop+Stand",
-    link: "#REPLACE-WITH-YOUR-TEMU-AFFILIATE-LINK",
-    source: "Temu",
-    category: "gadgets"
+    title: "Eyebrow Trimming Scissors with Comb",
+    price: "Rs 589",
+    wasPrice: "Rs 1,600",
+    image: "images/eyebrow-trimmer.jpg",
+    link: "https://s.click.aliexpress.com/e/_c3XgKjBj",
+    source: "AliExpress",
+    category: "beauty"
   },
   {
-    title: "Minimalist analog watch, leather strap",
-    price: "Rs 1,999",
-    wasPrice: "",
-    image: "https://placehold.co/400x400/eee/1c1f26?text=Watch",
-    link: "#REPLACE-WITH-YOUR-DARAZ-AFFILIATE-LINK",
-    source: "Daraz",
-    category: "fashion"
+    title: "3D Flame Essential Oil Diffuser Humidifier",
+    price: "Rs 11,405",
+    wasPrice: "Rs 22,816",
+    image: "https://placehold.co/400x400/eee/1c1f26?text=Oil+Diffuser",
+    link: "https://s.click.aliexpress.com/e/_c3Pjfzkz",
+    source: "AliExpress",
+    category: "home"
   },
   {
-    title: "LED ring light with tripod, 10 inch",
-    price: "Rs 2,900",
-    wasPrice: "Rs 3,800",
-    image: "https://placehold.co/400x400/eee/1c1f26?text=Ring+Light",
-    link: "#REPLACE-WITH-YOUR-ALIEXPRESS-AFFILIATE-LINK",
+    title: "Portable Handheld Fan with LED Display",
+    price: "Rs 5,869",
+    wasPrice: "Rs 11,985",
+    image: "https://placehold.co/400x400/eee/1c1f26?text=Handheld+Fan",
+    link: "https://s.click.aliexpress.com/e/_c3Fc8iYt",
     source: "AliExpress",
     category: "gadgets"
   },
   {
-    title: "Non-stick cookware set, 3 pieces",
-    price: "Rs 4,250",
+    title: "Square Zirconia Wedding Ring Set",
+    price: "Rs 1,037",
     wasPrice: "",
-    image: "https://placehold.co/400x400/eee/1c1f26?text=Cookware",
-    link: "#REPLACE-WITH-YOUR-TEMU-AFFILIATE-LINK",
-    source: "Temu",
-    category: "home"
-  },
-  {
-    title: "Foldable sunglasses with hard case",
-    price: "Rs 1,300",
-    wasPrice: "Rs 1,700",
-    image: "https://placehold.co/400x400/eee/1c1f26?text=Sunglasses",
-    link: "#REPLACE-WITH-YOUR-ALIEXPRESS-AFFILIATE-LINK",
+    image: "https://placehold.co/400x400/eee/1c1f26?text=Ring+Set",
+    link: "https://s.click.aliexpress.com/e/_c2uO9BAt",
     source: "AliExpress",
     category: "fashion"
   },
   {
-    title: "Mechanical keyboard, compact 60%",
-    price: "Rs 5,400",
-    wasPrice: "",
-    image: "https://placehold.co/400x400/eee/1c1f26?text=Keyboard",
-    link: "#REPLACE-WITH-YOUR-DARAZ-AFFILIATE-LINK",
-    source: "Daraz",
+    title: "Lenovo LE302 Wireless Bluetooth Earphones",
+    price: "Rs 4,758",
+    wasPrice: "Rs 5,440",
+    image: "https://placehold.co/400x400/eee/1c1f26?text=Lenovo+LE302",
+    link: "https://s.click.aliexpress.com/e/_c31uXiWl",
+    source: "AliExpress",
     category: "electronics"
   },
   {
-    title: "Smart LED desk lamp, touch control",
-    price: "Rs 1,650",
-    wasPrice: "Rs 2,100",
-    image: "https://placehold.co/400x400/eee/1c1f26?text=Desk+Lamp",
-    link: "#REPLACE-WITH-YOUR-TEMU-AFFILIATE-LINK",
-    source: "Temu",
+    title: "Lenovo LE209 Wireless Bluetooth Earphones",
+    price: "Rs 5,462",
+    wasPrice: "Rs 11,880",
+    image: "https://placehold.co/400x400/eee/1c1f26?text=Lenovo+LE209",
+    link: "https://s.click.aliexpress.com/e/_c2RK6dpn",
+    source: "AliExpress",
+    category: "electronics"
+  },
+  {
+    title: "2-in-1 Spray Massage Scalp Comb",
+    price: "Rs 2,867",
+    wasPrice: "Rs 6,240",
+    image: "https://placehold.co/400x400/eee/1c1f26?text=Massage+Comb",
+    link: "https://s.click.aliexpress.com/e/_c3URU3xF",
+    source: "AliExpress",
+    category: "beauty"
+  },
+  {
+    title: "Coffee Mug Warmer with Timer",
+    price: "Rs 5,487",
+    wasPrice: "Rs 10,978",
+    image: "images/mug-warmer.jpg",
+    link: "https://s.click.aliexpress.com/e/_c3ivmOfJ",
+    source: "AliExpress",
     category: "home"
+  },
+  {
+    title: "X8 Turbo Jet Fan Blower",
+    price: "Rs 5,866",
+    wasPrice: "Rs 12,228",
+    image: "https://placehold.co/400x400/eee/1c1f26?text=Jet+Blower",
+    link: "https://s.click.aliexpress.com/e/_c4OIjlbx",
+    source: "AliExpress",
+    category: "gadgets"
+  },
+  {
+    title: "Vintage Persian Style Area Rug",
+    price: "Rs 7,250",
+    wasPrice: "Rs 12,949",
+    image: "https://placehold.co/400x400/eee/1c1f26?text=Area+Rug",
+    link: "https://s.click.aliexpress.com/e/_c31J7cTf",
+    source: "AliExpress",
+    category: "home"
+  },
+  {
+    title: "Maca & Ginseng Capsules, 10000mg",
+    price: "Rs 2,169",
+    wasPrice: "Rs 4,337",
+    image: "https://placehold.co/400x400/eee/1c1f26?text=Maca+Capsules",
+    link: "https://s.click.aliexpress.com/e/_c3dxkdBx",
+    source: "AliExpress",
+    category: "health"
+  },
+  {
+    title: "Portable Mini Handheld Fan, Type-C",
+    price: "Rs 1,878",
+    wasPrice: "Rs 4,001",
+    image: "https://placehold.co/400x400/eee/1c1f26?text=Mini+Fan",
+    link: "https://s.click.aliexpress.com/e/_c3Y8bZgd",
+    source: "AliExpress",
+    category: "gadgets"
+  },
+  {
+    title: "Lenovo LP75 TWS Bluetooth Headphones",
+    price: "Rs 5,548",
+    wasPrice: "Rs 6,353",
+    image: "https://placehold.co/400x400/eee/1c1f26?text=Lenovo+LP75",
+    link: "https://s.click.aliexpress.com/e/_c3sbsMiH",
+    source: "AliExpress",
+    category: "electronics"
+  },
+  {
+    title: "Xiaomi Mijia Handheld Garment Steamer",
+    price: "Rs 13,564",
+    wasPrice: "Rs 21,581",
+    image: "https://placehold.co/400x400/eee/1c1f26?text=Garment+Steamer",
+    link: "https://s.click.aliexpress.com/e/_c3e0MCRf",
+    source: "AliExpress",
+    category: "home"
+  },
+  {
+    title: "240W USB Type-C Fast Charging Cable",
+    price: "Rs 669",
+    wasPrice: "Rs 1,399",
+    image: "https://placehold.co/400x400/eee/1c1f26?text=USB-C+Cable",
+    link: "https://s.click.aliexpress.com/e/_c3oNnygZ",
+    source: "AliExpress",
+    category: "electronics"
+  },
+  {
+    title: "Butterfly Floral Throw Pillow Covers",
+    price: "Rs 1,058",
+    wasPrice: "Rs 1,061",
+    image: "https://placehold.co/400x400/eee/1c1f26?text=Pillow+Covers",
+    link: "https://s.click.aliexpress.com/e/_c3QMPqO9",
+    source: "AliExpress",
+    category: "home"
+  },
+  {
+    title: "RGB LED Strip Lights with App Control",
+    price: "Rs 843",
+    wasPrice: "Rs 846",
+    image: "https://placehold.co/400x400/eee/1c1f26?text=LED+Strip",
+    link: "https://s.click.aliexpress.com/e/_c3pKITCd",
+    source: "AliExpress",
+    category: "home"
+  },
+  {
+    title: "Mini GPS Tracker for Vehicles",
+    price: "Rs 1,189",
+    wasPrice: "Rs 2,167",
+    image: "https://placehold.co/400x400/eee/1c1f26?text=GPS+Tracker",
+    link: "https://s.click.aliexpress.com/e/_c3o5oHUH",
+    source: "AliExpress",
+    category: "gadgets"
+  },
+  {
+    title: "Electric Callus Remover Foot File",
+    price: "Rs 3,834",
+    wasPrice: "",
+    image: "https://placehold.co/400x400/eee/1c1f26?text=Callus+Remover",
+    link: "https://s.click.aliexpress.com/e/_c3PvC8fn",
+    source: "AliExpress",
+    category: "beauty"
   }
 ];
-
