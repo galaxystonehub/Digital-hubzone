@@ -32,7 +32,7 @@ const PRODUCTS = [
     title: "3D Flame Essential Oil Diffuser Humidifier",
     price: "Rs 11,405",
     wasPrice: "Rs 22,816",
-    image: "https://placehold.co/400x400/eee/1c1f26?text=Oil+Diffuser",
+    image: "oil-diffuser.jpg",
     link: "https://s.click.aliexpress.com/e/_c3Pjfzkz",
     source: "AliExpress",
     category: "home"
@@ -41,7 +41,7 @@ const PRODUCTS = [
     title: "Portable Handheld Fan with LED Display",
     price: "Rs 5,869",
     wasPrice: "Rs 11,985",
-    image: "https://placehold.co/400x400/eee/1c1f26?text=Handheld+Fan",
+    image: "handheld-fan.jpg",
     link: "https://s.click.aliexpress.com/e/_c3Fc8iYt",
     source: "AliExpress",
     category: "gadgets"
@@ -77,7 +77,7 @@ const PRODUCTS = [
     title: "2-in-1 Spray Massage Scalp Comb",
     price: "Rs 2,867",
     wasPrice: "Rs 6,240",
-    image: "https://placehold.co/400x400/eee/1c1f26?text=Massage+Comb",
+    image: "massage-comb.jpg",
     link: "https://s.click.aliexpress.com/e/_c3URU3xF",
     source: "AliExpress",
     category: "beauty"
@@ -189,5 +189,23 @@ const PRODUCTS = [
     link: "https://s.click.aliexpress.com/e/_c3PvC8fn",
     source: "AliExpress",
     category: "beauty"
+  },
+  {
+    title: "Mesh Laundry Bag for Shoes & Delicates",
+    price: "Rs 1,221",
+    wasPrice: "Rs 2,499",
+    image: "laundry-bag.jpg",
+    link: "https://s.click.aliexpress.com/e/_c4TQC0rX",
+    source: "AliExpress",
+    category: "home"
+  },
+  {
+    title: "4D Bionic Neck & Shoulder Massager",
+    price: "Rs 13,692",
+    wasPrice: "Rs 31,896",
+    image: "neck-massager.jpg",
+    link: "https://s.click.aliexpress.com/e/_c3BVKjNB",
+    source: "AliExpress",
+    category: "health"
   }
 ];
