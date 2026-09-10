@@ -14,7 +14,7 @@ const PRODUCTS = [
     title: "2-in-1 Kitchen Spray Oil Dispenser",
     price: "Rs 650",
     wasPrice: "Rs 1,898",
-    image: "images/oil-dispenser.jpg",
+    image: "oil-dispenser.jpg",
     link: "https://s.click.aliexpress.com/e/_c444O7vr",
     source: "AliExpress",
     category: "home"
@@ -23,7 +23,7 @@ const PRODUCTS = [
     title: "Eyebrow Trimming Scissors with Comb",
     price: "Rs 589",
     wasPrice: "Rs 1,600",
-    image: "images/eyebrow-trimmer.jpg",
+    image: "eyebrow-trimmer.jpg",
     link: "https://s.click.aliexpress.com/e/_c3XgKjBj",
     source: "AliExpress",
     category: "beauty"
@@ -86,7 +86,7 @@ const PRODUCTS = [
     title: "Coffee Mug Warmer with Timer",
     price: "Rs 5,487",
     wasPrice: "Rs 10,978",
-    image: "images/mug-warmer.jpg",
+    image: "mug-warmer.jpg",
     link: "https://s.click.aliexpress.com/e/_c3ivmOfJ",
     source: "AliExpress",
     category: "home"
