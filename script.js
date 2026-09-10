@@ -3,7 +3,9 @@ const CATEGORIES = [
   { id: "electronics", label: "Electronics" },
   { id: "home", label: "Home" },
   { id: "fashion", label: "Fashion" },
-  { id: "gadgets", label: "Gadgets" }
+  { id: "gadgets", label: "Gadgets" },
+  { id: "beauty", label: "Beauty" },
+  { id: "health", label: "Health" }
 ];
 
 let activeCategory = "all";
