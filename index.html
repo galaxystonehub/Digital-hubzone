@@ -7,52 +7,325 @@
 <meta name="description" content="Digital Hub Zone curates the best deals in electronics, home, fashion and gadgets.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF6EF;
+    --surface:#FFFFFF;
+    --ink:#211C16;
+    --muted:#736A5C;
+    --line:#E7DFD1;
+    --accent:#D6472A;   /* deal / CTA */
+    --accent-ink:#FFFFFF;
+    --teal:#1F6F5C;      /* tag / trust */
+    --teal-soft:#E6EFEC;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.5;
+  }
+  a{color:inherit;}
+  img{display:block;max-width:100%;}
+
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px;}
+
+  /* Header */
+  header{
+    border-bottom:1px solid var(--line);
+    position:sticky;top:0;background:rgba(250,246,239,.92);
+    backdrop-filter:blur(6px);
+    z-index:10;
+  }
+  header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px;}
+  .brand{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:800;
+    font-size:20px;
+    letter-spacing:-0.01em;
+  }
+  .brand span{color:var(--accent);}
+  nav a{
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+    color:var(--muted);
+    margin-left:24px;
+  }
+
+  /* Hero */
+  .hero{padding:64px 0 40px;}
+  .hero h1{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:700;
+    font-size:clamp(34px,5.5vw,54px);
+    line-height:1.05;
+    letter-spacing:-0.02em;
+    margin:0 0 18px;
+    max-width:14ch;
+  }
+  .hero p{
+    color:var(--muted);
+    font-size:17px;
+    max-width:46ch;
+    margin:0 0 6px;
+  }
+  .hero .fine{
+    font-size:13px;
+    color:var(--muted);
+    margin-top:22px;
+    padding-top:18px;
+    border-top:1px solid var(--line);
+  }
+
+  /* Deals grid */
+  .deals{padding:20px 0 80px;}
+  .deals h2{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-size:22px;
+    font-weight:700;
+    margin:0 0 24px;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+  }
+  @media(min-width:640px){
+    .grid{grid-template-columns:repeat(3,1fr);}
+  }
+  @media(min-width:900px){
+    .grid{grid-template-columns:repeat(4,1fr);}
+  }
+
+  .card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 24px rgba(33,28,22,.08);
+  }
+  .card .thumb{
+    aspect-ratio:1/1;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px;
+    border-bottom:1px solid var(--line);
+  }
+  .card .thumb img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+  }
+  .card .body{
+    padding:14px 14px 16px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    flex:1;
+  }
+  .card .tag{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:var(--teal-soft);
+    color:var(--teal);
+    font-size:11px;
+    font-weight:600;
+    padding:3px 8px;
+    border-radius:999px;
+    width:fit-content;
+  }
+  .card .name{
+    font-size:14px;
+    font-weight:600;
+    color:var(--ink);
+    margin:0;
+    
+  }
+  .card .price{
+    font-size:16px;
+    font-weight:700;
+    color:var(--ink);
+    margin:0;
+  }
+  .card .cta{
+    margin-top:auto;
+    display:block;
+    text-align:center;
+    background:var(--accent);
+    color:var(--accent-ink);
+    text-decoration:none;
+    font-size:13px;
+    font-weight:600;
+    padding:10px 12px;
+    border-radius:8px;
+  }
+  .card .cta:hover{opacity:.92;}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:28px 0 40px;
+    color:var(--muted);
+    font-size:13px;
+  }
+</style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="#" class="wordmark">Digital Hub<span>Zone</span></a>
-
-    <div class="search-wrap">
-      <input type="text" id="searchInput" placeholder="Search gadgets, home, fashion..." aria-label="Search products">
-      <button id="searchBtn" aria-label="Search">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      </button>
-    </div>
-
-    <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">
-      <svg id="themeIcon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-    </button>
+<header>
+  <div class="wrap">
+    <div class="brand">Digital <span>Hub</span>Zone</div>
+    <nav>
+      <a href="#deals">Deals</a>
+    </nav>
   </div>
-
-  <nav class="category-row" id="categoryRow" aria-label="Categories"></nav>
 </header>
 
-<main>
-  <section class="hero">
+<section class="hero">
+  <div class="wrap">
     <h1>Good finds, sorted for you.</h1>
     <p>Hand-picked electronics, home essentials and everyday gear — updated weekly.</p>
-  </section>
+    <p class="fine">Digital Hub Zone — prices and availability are set by the retailer and may change.</p>
+  </div>
+</section>
 
-  <section class="results-bar">
-    <span id="resultsCount"></span>
-  </section>
+<section class="deals" id="deals">
+  <div class="wrap">
+    <h2>This week's picks</h2>
+    <div class="grid">
 
-  <section class="product-grid" id="productGrid" aria-live="polite"></section>
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="thumb"><img src="https://static-01.daraz.pk/p/44597d89eb506f9bf710fd6080f80874.jpg" alt="Product 1" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">Deal</span>
+          <p class="name">Product name here</p>
+          <p class="price">Rs. 0</p>
+          <a class="cta" href="https://s.daraz.pk/s.Xpq78?cc" target="_blank" rel="noopener">Buy Product</a>
+        </div>
+      </div>
 
-  <p class="empty-state" id="emptyState" hidden>No products match that search. Try a different term.</p>
-</main>
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="thumb"><img src="https://static-01.daraz.pk/p/8dd8b1e6ac97d6f8fe8ba13df58bf2da.jpg" alt="Product 2" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">Deal</span>
+          <p class="name">Product name here</p>
+          <p class="price">Rs. 0</p>
+          <a class="cta" href="https://s.daraz.pk/s.XpqQ2?cc" target="_blank" rel="noopener">Buy Product</a>
+        </div>
+      </div>
 
-<footer class="site-footer">
-  <p>Digital Hub Zone — prices and availability are set by the retailer and may change.</p>
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="thumb"><img src="https://pk-live-21.slatic.net/kf/S2a8e7076b56447ebb11dcf5dc2dbcc58s.jpg" alt="Product 3" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">Deal</span>
+          <p class="name">Product name here</p>
+          <p class="price">Rs. 0</p>
+          <a class="cta" href="https://s.daraz.pk/s.Xpq9W?cc" target="_blank" rel="noopener">Buy Product</a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="thumb"><img src="https://pk-live-21.slatic.net/kf/S306dd72c7a14484e8e18863a91f37ee9F.jpg" alt="Product 4" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">Deal</span>
+          <p class="name">Product name here</p>
+          <p class="price">Rs. 0</p>
+          <a class="cta" href="https://s.daraz.pk/s.Xpqkd?cc" target="_blank" rel="noopener">Buy Product</a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <div class="thumb"><img src="https://static-01.daraz.pk/p/9a8f70d7f2444c9addc95cd68192ea17.png" alt="Product 5" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">Deal</span>
+          <p class="name">Product name here</p>
+          <p class="price">Rs. 0</p>
+          <a class="cta" href="https://s.daraz.pk/s.XpqPa?cc" target="_blank" rel="noopener">Buy Product</a>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card">
+        <div class="thumb"><img src="https://static-01.daraz.pk/p/793e0ec9d011bafdcd3d67716709bc30.png" alt="Product 6" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">Deal</span>
+          <p class="name">Product name here</p>
+          <p class="price">Rs. 0</p>
+          <a class="cta" href="https://s.daraz.pk/s.Xpqlo?cc" target="_blank" rel="noopener">Buy Product</a>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="card">
+        <div class="thumb"><img src="https://static-01.daraz.pk/p/dd17a56d9e0e16d1d4231513c3e5bb90.png" alt="Product 7" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">Deal</span>
+          <p class="name">Product name here</p>
+          <p class="price">Rs. 0</p>
+          <a class="cta" href="https://s.daraz.pk/s.XpqOF?cc" target="_blank" rel="noopener">Buy Product</a>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="card">
+        <div class="thumb"><img src="https://static-01.daraz.pk/p/3f264c5afeaa46baa9175820b4c84cbc.jpg" alt="Product 8" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">Deal</span>
+          <p class="name">Product name here</p>
+          <p class="price">Rs. 0</p>
+          <a class="cta" href="https://s.daraz.pk/s.Xpqm5?cc" target="_blank" rel="noopener">Buy Product</a>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="card">
+        <div class="thumb"><img src="https://static-01.daraz.pk/p/3f264c5afeaa46baa9175820b4c84cbc.jpg" alt="Product 9" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">Deal</span>
+          <p class="name">Product name here</p>
+          <p class="price">Rs. 0</p>
+          <a class="cta" href="https://s.daraz.pk/s.Xpqne?cc" target="_blank" rel="noopener">Buy Product</a>
+        </div>
+      </div>
+
+      <!-- Card 10 -->
+      <div class="card">
+        <div class="thumb"><img src="https://static-01.daraz.pk/p/0d7f6bbe7c5f131a781c0b0b2cdbca07.png" alt="Product 10" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">Deal</span>
+          <p class="name">Product name here</p>
+          <p class="price">Rs. 0</p>
+          <a class="cta" href="https://s.daraz.pk/s.XpqM9?cc" target="_blank" rel="noopener">Buy Product</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Digital Hub Zone — prices and availability are set by the retailer and may change.
+  </div>
 </footer>
 
-<div class="toast" id="toast"></div>
-
-<script src="products.js"></script>
-<script src="script.js"></script>
 </body>
 </html>
