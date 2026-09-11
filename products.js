@@ -207,5 +207,95 @@ const PRODUCTS = [
     link: "https://s.click.aliexpress.com/e/_c3BVKjNB",
     source: "AliExpress",
     category: "health"
+  },
+  {
+    title: "Daraz Product 1 (add name)",
+    price: "Rs 0",
+    wasPrice: "",
+    image: "https://static-01.daraz.pk/p/44597d89eb506f9bf710fd6080f80874.jpg",
+    link: "https://s.daraz.pk/s.Xpq78?cc",
+    source: "Daraz",
+    category: "home"
+  },
+  {
+    title: "Daraz Product 2 (add name)",
+    price: "Rs 0",
+    wasPrice: "",
+    image: "https://static-01.daraz.pk/p/8dd8b1e6ac97d6f8fe8ba13df58bf2da.jpg",
+    link: "https://s.daraz.pk/s.XpqQ2?cc",
+    source: "Daraz",
+    category: "home"
+  },
+  {
+    title: "Daraz Product 3 (add name)",
+    price: "Rs 0",
+    wasPrice: "",
+    image: "https://pk-live-21.slatic.net/kf/S2a8e7076b56447ebb11dcf5dc2dbcc58s.jpg",
+    link: "https://s.daraz.pk/s.Xpq9W?cc",
+    source: "Daraz",
+    category: "home"
+  },
+  {
+    title: "Daraz Product 4 (add name)",
+    price: "Rs 0",
+    wasPrice: "",
+    image: "https://pk-live-21.slatic.net/kf/S306dd72c7a14484e8e18863a91f37ee9F.jpg",
+    link: "https://s.daraz.pk/s.Xpqkd?cc",
+    source: "Daraz",
+    category: "home"
+  },
+  {
+    title: "Daraz Product 5 (add name)",
+    price: "Rs 0",
+    wasPrice: "",
+    image: "https://static-01.daraz.pk/p/9a8f70d7f2444c9addc95cd68192ea17.png",
+    link: "https://s.daraz.pk/s.XpqPa?cc",
+    source: "Daraz",
+    category: "home"
+  },
+  {
+    title: "Daraz Product 6 (add name)",
+    price: "Rs 0",
+    wasPrice: "",
+    image: "https://static-01.daraz.pk/p/793e0ec9d011bafdcd3d67716709bc30.png",
+    link: "https://s.daraz.pk/s.Xpqlo?cc",
+    source: "Daraz",
+    category: "home"
+  },
+  {
+    title: "Daraz Product 7 (add name)",
+    price: "Rs 0",
+    wasPrice: "",
+    image: "https://static-01.daraz.pk/p/dd17a56d9e0e16d1d4231513c3e5bb90.png",
+    link: "https://s.daraz.pk/s.XpqOF?cc",
+    source: "Daraz",
+    category: "home"
+  },
+  {
+    title: "Daraz Product 8 (add name)",
+    price: "Rs 0",
+    wasPrice: "",
+    image: "https://static-01.daraz.pk/p/3f264c5afeaa46baa9175820b4c84cbc.jpg",
+    link: "https://s.daraz.pk/s.Xpqm5?cc",
+    source: "Daraz",
+    category: "home"
+  },
+  {
+    title: "Daraz Product 9 (add name - same photo as #8, confirm if different product)",
+    price: "Rs 0",
+    wasPrice: "",
+    image: "https://static-01.daraz.pk/p/3f264c5afeaa46baa9175820b4c84cbc.jpg",
+    link: "https://s.daraz.pk/s.Xpqne?cc",
+    source: "Daraz",
+    category: "home"
+  },
+  {
+    title: "Daraz Product 10 (add name)",
+    price: "Rs 0",
+    wasPrice: "",
+    image: "https://static-01.daraz.pk/p/0d7f6bbe7c5f131a781c0b0b2cdbca07.png",
+    link: "https://s.daraz.pk/s.XpqM9?cc",
+    source: "Daraz",
+    category: "home"
   }
 ];
